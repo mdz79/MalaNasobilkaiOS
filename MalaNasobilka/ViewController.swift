@@ -8,8 +8,22 @@
 
 import UIKit
 
+
+
+    // var nasobitel:Int = ZadajCisloTxt.text.toInt()
+
+    var nasobitel:Int = 5
+    var maximum:Int = 0
+    var aktualnySucet:Int = 0
+    var maxi1:Int = nasobitel * 10
+    var aktualnySucet:Int = nasobitel
+
+    
+
+
 class ViewController: UIViewController {
 
+    
     // Prva obrazovka
     
     @IBOutlet weak var BG1: UIImageView!
@@ -24,6 +38,24 @@ class ViewController: UIViewController {
     @IBOutlet weak var PocitanieTxt: UILabel!
     @IBOutlet weak var SipkaDalej: UIButton!
     
+
+    
+    func restart() {
+        NasobilkaBnr.hidden = false
+        ZadajCisloTxt.hidden = false
+        BG1.hidden = false
+        HrajBtn.hidden = false
+        
+        BG2.hidden = true
+        PocitanieTxt.hidden = true
+        SipkaDalej.hidden = true
+        
+        maximum = 0
+        aktualnySucet = 0
+
+    }
+    
+    
     
     // Samotny program
     @IBAction func HrajProgram(sender: AnyObject) {
@@ -37,8 +69,24 @@ class ViewController: UIViewController {
         PocitanieTxt.hidden = false
         SipkaDalej.hidden = false
         
+        PocitanieTxt.text = "0 + \(nasobitel) = \(nasobitel)"
         
     }
+    
+    
+    @IBAction func Dalej(sender: AnyObject) {
+        
+        if maxi1 > aktualnySucet {
+            PocitanieTxt.text = " \(aktualnySucet) + \(nasobitel) = \(aktualnySucet + nasobitel)"
+            aktualnySucet = aktualnySucet + nasobitel
+        } else {
+            restart()
+        }
+        
+        
+    }
+    
+    
     
     
     

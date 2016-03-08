@@ -73,6 +73,9 @@
                                     <constraint firstAttribute="height" constant="128" id="TXH-Mo-faG"/>
                                 </constraints>
                                 <state key="normal" image="sipka-right"/>
+                                <connections>
+                                    <action selector="Dalej:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ozw-4G-VLd"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
