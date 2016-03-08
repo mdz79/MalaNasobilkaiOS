@@ -10,15 +10,13 @@ import UIKit
 
 
 
-    // var nasobitel:Int = ZadajCisloTxt.text.toInt()
 
-    var nasobitel:Int = 5
+
+    var nasobitel:Int = 0
     var maximum:Int = 0
     var aktualnySucet:Int = 0
-    var maxi1:Int = nasobitel * 10
-    var aktualnySucet:Int = nasobitel
+    var maxi1:Int = 0
 
-    
 
 
 class ViewController: UIViewController {
@@ -68,7 +66,8 @@ class ViewController: UIViewController {
         BG2.hidden = false
         PocitanieTxt.hidden = false
         SipkaDalej.hidden = false
-        
+        nasobitel = Int(ZadajCisloTxt.text!)!
+        maxi1 = nasobitel * 10
         PocitanieTxt.text = "0 + \(nasobitel) = \(nasobitel)"
         
     }
@@ -76,9 +75,10 @@ class ViewController: UIViewController {
     
     @IBAction func Dalej(sender: AnyObject) {
         
-        if maxi1 > aktualnySucet {
-            PocitanieTxt.text = " \(aktualnySucet) + \(nasobitel) = \(aktualnySucet + nasobitel)"
+        if maxi1 > (aktualnySucet + nasobitel) {
             aktualnySucet = aktualnySucet + nasobitel
+            PocitanieTxt.text = " \(aktualnySucet) + \(nasobitel) = \(aktualnySucet + nasobitel)"
+
         } else {
             restart()
         }
@@ -89,7 +89,7 @@ class ViewController: UIViewController {
     
     
     
-    
+ /*
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -100,7 +100,7 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+*/
 
 }
 
