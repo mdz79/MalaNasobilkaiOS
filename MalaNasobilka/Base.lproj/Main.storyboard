@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MalaNasobilka" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +18,126 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BlackBoardbg" translatesAutoresizingMaskIntoConstraints="NO" id="876-cs-dnX">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3BG-Sh-vcO">
+                                <rect key="frame" x="208" y="404" width="185" height="121"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="185" id="6Xz-Em-1Iz"/>
+                                    <constraint firstAttribute="height" constant="121" id="M8x-L9-A83"/>
+                                </constraints>
+                                <state key="normal" image="Sponge"/>
+                                <connections>
+                                    <action selector="HrajProgram:" destination="BYZ-38-t0r" eventType="touchUpInside" id="50J-da-Df8"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Zadaj číslo ... (1-10)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YgX-ZR-eKe">
+                                <rect key="frame" x="190" y="341" width="221" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Nasobilka" translatesAutoresizingMaskIntoConstraints="NO" id="Cjj-IJ-PTs">
+                                <rect key="frame" x="180" y="75" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="3Yu-sN-Ew8"/>
+                                    <constraint firstAttribute="width" constant="240" id="Xhn-6R-VSK"/>
+                                </constraints>
+                            </imageView>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chalkboard-hi-1" translatesAutoresizingMaskIntoConstraints="NO" id="t3Q-td-083">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="t3Q-td-083" secondAttribute="height" multiplier="111:112" id="cQT-Gb-5iK"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="cQT-Gb-5iK"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0 + 2 = 2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tNb-D8-vuf">
+                                <rect key="frame" x="110" y="110" width="396" height="93"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="93" id="cxM-gJ-oHf"/>
+                                    <constraint firstAttribute="width" constant="396" id="dP0-tB-tGt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="60"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sIi-yd-3qk" userLabel="SipkaDalej">
+                                <rect key="frame" x="200" y="359" width="211" height="152"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="211" id="LXS-dZ-TyN"/>
+                                    <constraint firstAttribute="height" constant="128" id="TXH-Mo-faG"/>
+                                </constraints>
+                                <state key="normal" image="sipka-right"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="876-cs-dnX" secondAttribute="bottom" id="0oE-aa-YuT"/>
+                            <constraint firstItem="t3Q-td-083" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="-8" id="0xT-Cg-jp6"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="876-cs-dnX" secondAttribute="trailing" constant="-20" id="10t-NG-sYv"/>
+                            <constraint firstItem="t3Q-td-083" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="4qp-SL-LCs"/>
+                            <constraint firstItem="tNb-D8-vuf" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="90" id="7sf-hG-Hn5"/>
+                            <constraint firstItem="Cjj-IJ-PTs" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="55" id="AlD-cV-01n"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="3BG-Sh-vcO" secondAttribute="bottom" constant="75" id="ArD-KR-IY5"/>
+                            <constraint firstItem="3BG-Sh-vcO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="C6D-oh-K74"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="t3Q-td-083" secondAttribute="trailing" constant="-20" id="GBw-dl-DHn"/>
+                            <constraint firstItem="Cjj-IJ-PTs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HOJ-EW-8l4"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="sIi-yd-3qk" secondAttribute="bottom" constant="120" id="JOn-ty-rDV"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="t3Q-td-083" secondAttribute="bottom" constant="-64" id="KXF-vZ-Kvo"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="t3Q-td-083" secondAttribute="trailing" constant="-75" id="Nzt-QJ-6hq"/>
+                            <constraint firstItem="3BG-Sh-vcO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="20" id="Q58-Gx-LTM"/>
+                            <constraint firstItem="876-cs-dnX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="RhZ-1Y-NHE"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="t3Q-td-083" secondAttribute="trailing" constant="-20" id="TP8-eG-6eK"/>
+                            <constraint firstItem="sIi-yd-3qk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Uis-MI-bYw"/>
+                            <constraint firstItem="t3Q-td-083" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-31" id="WEj-wu-fU9"/>
+                            <constraint firstItem="tNb-D8-vuf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="XNx-w8-Vl5"/>
+                            <constraint firstItem="3BG-Sh-vcO" firstAttribute="centerX" secondItem="YgX-ZR-eKe" secondAttribute="centerX" id="XjG-gV-JMB"/>
+                            <constraint firstItem="3BG-Sh-vcO" firstAttribute="top" secondItem="YgX-ZR-eKe" secondAttribute="bottom" constant="33" id="dgA-0l-nXf"/>
+                            <constraint firstItem="t3Q-td-083" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="eNt-3B-s0V"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="t3Q-td-083" secondAttribute="bottom" id="epr-57-unl"/>
+                            <constraint firstItem="876-cs-dnX" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="tMg-zf-HK8"/>
+                            <constraint firstItem="t3Q-td-083" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="tXA-7C-52W"/>
+                            <constraint firstItem="t3Q-td-083" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="vk4-p1-yle"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="t3Q-td-083" secondAttribute="bottom" id="weq-Fe-pXJ"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="0xT-Cg-jp6"/>
+                                <exclude reference="4qp-SL-LCs"/>
+                                <exclude reference="GBw-dl-DHn"/>
+                                <exclude reference="KXF-vZ-Kvo"/>
+                                <exclude reference="Nzt-QJ-6hq"/>
+                                <exclude reference="WEj-wu-fU9"/>
+                                <exclude reference="eNt-3B-s0V"/>
+                                <exclude reference="weq-Fe-pXJ"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="BG1" destination="876-cs-dnX" id="7uh-5S-ed8"/>
+                        <outlet property="BG2" destination="t3Q-td-083" id="W0l-X6-PVE"/>
+                        <outlet property="HrajBtn" destination="3BG-Sh-vcO" id="j3A-Ub-2a9"/>
+                        <outlet property="NasobilkaBnr" destination="Cjj-IJ-PTs" id="HWa-L2-jPX"/>
+                        <outlet property="PocitanieTxt" destination="tNb-D8-vuf" id="OWj-eZ-AJC"/>
+                        <outlet property="SipkaDalej" destination="sIi-yd-3qk" id="JKa-kn-m9C"/>
+                        <outlet property="ZadajCisloTxt" destination="YgX-ZR-eKe" id="7Bb-bX-8JH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="667" y="438"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="BlackBoardbg" width="786" height="560"/>
+        <image name="Nasobilka" width="510" height="86"/>
+        <image name="Sponge" width="185" height="121"/>
+        <image name="chalkboard-hi-1" width="543" height="414"/>
+        <image name="sipka-right" width="600" height="456"/>
+    </resources>
 </document>
